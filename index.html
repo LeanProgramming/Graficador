@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="node_modules/chart.js/dist/chart.umd.js"></script>
+    <title>Graficador de señales</title>
+</head>
+
+<body>
+
+    
+    <div id="ingreso_datos">
+        <form id="formulario">
+            <label for="frequency">Frecuencia:</label>
+            <input type="number" id="frequency" name="frequency" min="0" max="1000" step="1" value="1.0">
+
+            <label for="amplitude">Amplitud:</label>
+            <input type="number" id="amplitude" name="amplitude" min="0" max="100" step="1" value="1.0">
+
+            <label for="phase">Fase:</label>
+            <input type="number" id="phase" name="phase" min="-180" max="180" step="1" value="0.0">
+        </form>
+    </div>
+
+    <div class="botones">
+        <div class="frecuencias">
+            <p>Cantidad de Frecuencias: <span id="cant_f">1</span></p>
+            <button id="agregar">Agregar frecuencia</button>
+            <button id="quitar">Quitar frecuencia</button>
+        </div>
+        <button id="dibujar" type="submit">Graficar</button>
+    </div>
+
+    <div>
+        <canvas id="grafica"></canvas>
+    </div>
+
+
+
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>
